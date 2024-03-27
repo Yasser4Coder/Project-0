@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import "../fonts/bord-demo/Bord.otf";
 import bgimage from "../public/images/background.png";
 import LogoutButton from "../components/LogoutButton";
+import Logout from "../components/Logout";
 
 import MissionExplanationTech from "../components/MissionExplanationTech";
 
@@ -15,7 +16,7 @@ const VersesPage = () => {
           alt=""
           src={bgimage}
         />
-        <Header image={<LogoutButton />} />
+        <Header image={<LogoutButton />} event={<Logout />} />
         <main className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
           <MissionExplanationTech />
         </main>

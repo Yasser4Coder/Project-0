@@ -20,13 +20,13 @@ const Header = (props) => {
             src={logoimage}
           />
           <div className="cursor-pointer tracking-[0.24em] text-[22px] z-[3]">
-            <Link to={"/"}>PROJECT-0</Link>
+            <Link to={"/Project-0"}>PROJECT-0</Link>
           </div>
         </div>
         <div className="links flex items-center mq653:hidden gap-[50px]">
-          <Link to={"/home"}>Home</Link>
-          <Link to={"/scoreboard"}>Scoreboard</Link>
-          <Link to={"/verses"}>Verses</Link>
+          <Link to={"/Project-0/home"}>Home</Link>
+          <Link to={"/Project-0/scoreboard"}>Scoreboard</Link>
+          <Link to={"/Project-0/verses"}>Verses</Link>
           <div className="icon">{props.image}</div>
         </div>
         <div className="bar-icon relative hidden mq653:block">
@@ -38,10 +38,11 @@ const Header = (props) => {
             src={icon}
           />
           {toggel && (
-            <div className="dropdown absolute bg-red-600 items-center rounded-xl justify-center w-[200px] pt-[25px] pb-[25px] flex flex-col gap-[30px] right-[0px] border-[3px] border-solid border-darkblue [background:linear-gradient(90deg,_#7d26cd,_#171717)]">
-              <Link to={"/home"}>Home</Link>
-              <Link to={"/scoreboard"}>Scoreboard</Link>
-              <Link to={"/verses"}>Verses</Link>
+            <div className="dropdown cursor-pointer absolute bg-red-600 items-center rounded-xl justify-center w-[200px] pt-[25px] pb-[25px] flex flex-col gap-[30px] right-[0px] border-[3px] border-solid border-darkblue [background:linear-gradient(90deg,_#7d26cd,_#171717)]">
+              <Link to={"/Project-0/home"}>Home</Link>
+              <Link to={"/Project-0/scoreboard"}>Scoreboard</Link>
+              <Link to={"/Project-0/verses"}>Verses</Link>
+              {props.event}
             </div>
           )}
         </div>

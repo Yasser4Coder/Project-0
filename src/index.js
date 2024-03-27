@@ -12,31 +12,31 @@ import VersePage from "./pages/VersePage";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Project-0",
     element: <WelcomPage />,
   },
   {
-    path: "/home",
+    path: "/Project-0/home",
     element: <HomePage />,
   },
   {
-    path: "/login",
+    path: "/Project-0/login",
     element: <LoginPage />,
   },
   {
-    path: "/verses",
+    path: "/Project-0/verses",
     element: <VersesPage />,
   },
   {
-    path: "/scoreboard",
+    path: "/Project-0/scoreboard",
     element: <ScoreBoard />,
   },
   {
-    path: "/challenge",
+    path: "/Project-0/challenge",
     element: <ChallengePage />,
   },
   {
-    path: "/verse",
+    path: "/Project-0/verse",
     element: <VersePage />,
   },
 ]);

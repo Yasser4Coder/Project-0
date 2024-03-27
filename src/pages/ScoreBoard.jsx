@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import bgimage from "../public/images/background.png";
 import "../fonts/bord-demo/Bord.otf";
 import LogoutButton from "../components/LogoutButton";
+import Logout from "../components/Logout";
 
 const ScoreBoard = () => {
   return (
@@ -13,7 +14,7 @@ const ScoreBoard = () => {
           alt=""
           src={bgimage}
         />
-        <Header image={<LogoutButton />} />
+        <Header image={<LogoutButton />} event={<Logout />} />
         <main className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
           <section className="w-[1120px] rounded-9xl bg-gray-100 box-border overflow-auto shrink-0 flex flex-col items-center justify-start pt-14 pb-[173px] pr-9 pl-9 pl-[21px] gap-[57px] max-w-full z-[1] text-center text-45xl text-blueviolet-200 font-bord-demo border-[3px] border-solid border-blueviolet-200 lg:pt-9 lg:pb-28 lg:box-border mq750:gap-[28px_57px] mq750:pt-[23px] mq750:pb-[73px] mq750:box-border">
             <div className="w-[931px] flex flex-row items-start justify-center py-0 pr-0.5 pl-0 box-border max-w-full">

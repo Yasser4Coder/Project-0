@@ -4,10 +4,11 @@ import "../fonts/bord-demo/Bord.otf";
 import "../fonts/SegoeUI-VF/Segoe-UI-Variable-Static-Small-Light.ttf";
 import { useNavigate } from "react-router-dom";
 import LoginButton from "../components/LoginButton";
+import Login from "../components/Login";
 const WelcomePage = () => {
   const navigate = useNavigate();
   const handelClick = () => {
-    navigate("/login");
+    navigate("/Project-0/login");
   };
   return (
     <div className="w-full relative bg-gray-100 overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[113px] box-border gap-[112px] tracking-[normal] mq450:gap-[28px_112px] mq975:gap-[56px_112px]">
@@ -16,7 +17,7 @@ const WelcomePage = () => {
         alt=""
         src={bgimage}
       />
-      <Header image={<LoginButton />} />
+      <Header image={<LoginButton />} event={<Login />} />
       <main className="self-stretch flex flex-row items-start justify-center py-0 px-10 box-border max-w-full">
         <section className="w-[1120px]  flex flex-col items-end justify-start gap-[30px] max-w-full text-center text-[48px] text-white font-bord-demo">
           <div className="self-stretch rounded-9xl bg-gray-100 box-border overflow-hidden flex flex-col items-center justify-start pt-4 px-5 pb-[61.5px] gap-[89.5px] max-w-full z-[1] border-[3px] border-solid border-blueviolet-200 mq700:gap-[22px_89.5px] mq700:pt-5 mq700:pb-10 mq700:box-border mq975:gap-[45px_89.5px]">

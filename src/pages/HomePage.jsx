@@ -4,6 +4,8 @@ import bgimage from "../public/images/background.png";
 import "../fonts/bord-demo/Bord.otf";
 import "../fonts/SegoeUI-VF/Segoe-UI-Variable-Static-Text-Light.ttf";
 import LogoutButton from "../components/LogoutButton";
+import Logout from "../components/Logout";
+
 const HomePage = () => {
   return (
     <div>
@@ -13,7 +15,7 @@ const HomePage = () => {
           alt=""
           src={bgimage}
         />
-        <Header image={<LogoutButton />} />
+        <Header image={<LogoutButton />} event={<Logout />} />
         <main className="self-stretch h-full flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
           <section className="w-[1120px] rounded-9xl bg-gray-100 box-border overflow-hidden shrink-0 flex flex-col items-center justify-start pt-14 px-5 pb-[81px] gap-[70px] max-w-full z-[1] text-center text-45xl text-white font-bord-demo border-[3px] border-solid border-blueviolet-200 lg:pt-9 lg:pb-[53px] lg:box-border">
             <div className="w-[930px] flex flex-col items-start justify-start gap-[24px] max-w-full">

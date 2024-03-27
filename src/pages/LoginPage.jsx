@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import bgimage from "../public/images/background.png";
 import "../fonts/bord-demo/Bord.otf";
 import LoginButton from "../components/LoginButton";
+import Login from "../components/Login";
 
 const LoginPage = () => {
   return (
@@ -12,8 +13,8 @@ const LoginPage = () => {
         alt=""
         src={bgimage}
       />
-      <Header image={<LoginButton />} />
-      <main className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
+      <Header image={<LoginButton />} event={<Login />} />
+      <main className="self-stretch flex flex-row items-start justify-center py-0 pb-[50px] px-5 box-border max-w-full">
         <LoginForm />
       </main>
     </div>

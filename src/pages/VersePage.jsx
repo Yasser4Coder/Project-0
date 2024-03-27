@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import bgimage from "../public/images/background.png";
 import LogoutButton from "../components/LogoutButton";
+import Logout from "../components/Logout";
 
 const VersePage = () => {
   return (
@@ -11,7 +12,7 @@ const VersePage = () => {
         alt=""
         src={bgimage}
       />
-      <Header image={<LogoutButton />} />
+      <Header image={<LogoutButton />} event={<Logout />} />
       <main className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full"></main>
     </div>
   );
