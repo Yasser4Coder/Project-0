@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Project-0/static/css/main.b030553c.css",
+    "main.js": "/Project-0/static/js/main.cea39b6f.js",
+    "static/media/Segoe-UI-Variable-Static-Small-Light.ttf": "/Project-0/static/media/Segoe-UI-Variable-Static-Small-Light.9444a05c0a9b2204d019.ttf",
+    "static/media/Segoe-UI-Variable-Static-Text-Light.ttf": "/Project-0/static/media/Segoe-UI-Variable-Static-Text-Light.e8d76bde5cdcaeb6a029.ttf",
+    "static/media/Segoe-UI-Variable-Static-Display-Semibold.ttf": "/Project-0/static/media/Segoe-UI-Variable-Static-Display-Semibold.0f5cc00059a4e27bef03.ttf",
+    "static/media/Segoe-UI-Variable-Static-Text-Semilight.ttf": "/Project-0/static/media/Segoe-UI-Variable-Static-Text-Semilight.62cb0b8f6661462d2cda.ttf",
+    "static/media/background.png": "/Project-0/static/media/background.6b3147de1d3713ae2f9b.png",
+    "static/media/icon.png": "/Project-0/static/media/icon.745580e91f9a46765063.png",
+    "static/media/Bord.otf": "/Project-0/static/media/Bord.690bb849a48106477e79.otf",
+    "index.html": "/Project-0/index.html",
+    "main.b030553c.css.map": "/Project-0/static/css/main.b030553c.css.map",
+    "main.cea39b6f.js.map": "/Project-0/static/js/main.cea39b6f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b030553c.css",
+    "static/js/main.cea39b6f.js"
+  ]
+}
