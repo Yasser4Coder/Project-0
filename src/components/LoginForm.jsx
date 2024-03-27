@@ -1,6 +1,6 @@
 const LoginForm = () => {
   return (
-    <section className="w-[1120px] rounded-9xl bg-gray-100 box-border overflow-hidden shrink-0 flex flex-col items-center justify-start pt-16 px-5 pb-[111px] gap-[67px] max-w-full z-[1] text-center text-56xl text-gainsboro-200 font-bord-demo border-[3px] border-solid border-blueviolet-200 mq450:gap-[17px_67px] mq750:gap-[33px_67px] mq750:pt-[42px] mq750:pb-[72px] mq750:box-border">
+    <form className="w-[1120px] rounded-9xl bg-gray-100 box-border overflow-hidden shrink-0 flex flex-col items-center justify-start pt-16 px-5 pb-[111px] gap-[67px] max-w-full z-[1] text-center text-56xl text-gainsboro-200 font-bord-demo border-[3px] border-solid border-blueviolet-200 mq450:gap-[17px_67px] mq750:gap-[33px_67px] mq750:pt-[42px] mq750:pb-[72px] mq750:box-border">
       <div className="w-[742px] flex flex-col items-start justify-start gap-[48px] max-w-full mq750:gap-[24px_48px]">
         <div className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
           <h1 className="m-0 Bord h-20 w-[400px] relative text-inherit tracking-[0.1em] font-normal font-inherit text-transparent !bg-clip-text [background:linear-gradient(83.88deg,_#7d26cd,_#e2e2e2)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block shrink-0 max-w-full mq450:text-26xl mq750:text-41xl">
@@ -27,13 +27,16 @@ const LoginForm = () => {
         </div>
       </div>
       <div className="w-[742px] flex flex-row items-start justify-center max-w-full">
-        <button className="cursor-pointer py-3.5 px-5 bg-[transparent] w-[362px] rounded-6xl [background:linear-gradient(92.09deg,_#7d26cd,_#171717)] box-border overflow-hidden shrink-0 flex flex-row items-start justify-center max-w-full border-[1px] border-solid border-gainsboro-100 hover:bg-silver-200 hover:box-border hover:border-[1px] hover:border-solid hover:border-silver-100">
+        <button
+          type="submit"
+          className="cursor-pointer py-3.5 px-5 bg-[transparent] w-[362px] rounded-6xl [background:linear-gradient(92.09deg,_#7d26cd,_#171717)] box-border overflow-hidden shrink-0 flex flex-row items-start justify-center max-w-full border-[1px] border-solid border-gainsboro-100 hover:bg-silver-200 hover:box-border hover:border-[1px] hover:border-solid hover:border-silver-100"
+        >
           <div className="relative Bord text-21xl tracking-[0.16em] font-bord-demo text-white text-center cursor-pointer mq450:text-5xl mq750:text-13xl">
             LoGin
           </div>
         </button>
       </div>
-    </section>
+    </form>
   );
 };
 
