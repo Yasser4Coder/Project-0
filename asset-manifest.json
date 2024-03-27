@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Project-0/static/css/main.b030553c.css",
-    "main.js": "/Project-0/static/js/main.acbc16ca.js",
+    "main.js": "/Project-0/static/js/main.b96912b7.js",
     "static/media/Segoe-UI-Variable-Static-Small-Light.ttf": "/Project-0/static/media/Segoe-UI-Variable-Static-Small-Light.9444a05c0a9b2204d019.ttf",
     "static/media/Segoe-UI-Variable-Static-Text-Light.ttf": "/Project-0/static/media/Segoe-UI-Variable-Static-Text-Light.e8d76bde5cdcaeb6a029.ttf",
     "static/media/Segoe-UI-Variable-Static-Display-Semibold.ttf": "/Project-0/static/media/Segoe-UI-Variable-Static-Display-Semibold.0f5cc00059a4e27bef03.ttf",
@@ -11,10 +11,10 @@
     "static/media/Bord.otf": "/Project-0/static/media/Bord.690bb849a48106477e79.otf",
     "index.html": "/Project-0/index.html",
     "main.b030553c.css.map": "/Project-0/static/css/main.b030553c.css.map",
-    "main.acbc16ca.js.map": "/Project-0/static/js/main.acbc16ca.js.map"
+    "main.b96912b7.js.map": "/Project-0/static/js/main.b96912b7.js.map"
   },
   "entrypoints": [
     "static/css/main.b030553c.css",
-    "static/js/main.acbc16ca.js"
+    "static/js/main.b96912b7.js"
   ]
 }
