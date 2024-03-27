@@ -16,7 +16,7 @@ const HomePage = () => {
     <div>
       <div className="w-full relative bg-gray-100 overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[127px] box-border gap-[72px] tracking-[normal] mq450:gap-[18px_72px] mq750:gap-[36px_72px]">
         <img
-          className="w-full h-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] max-w-full overflow-hidden max-h-full object-cover"
+          className="w-full h-[100vh] absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] max-w-full overflow-hidden max-h-full object-cover"
           alt=""
           src={bgimage}
         />
