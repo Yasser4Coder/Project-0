@@ -5,8 +5,13 @@ import "../fonts/bord-demo/Bord.otf";
 import "../fonts/SegoeUI-VF/Segoe-UI-Variable-Static-Text-Light.ttf";
 import LogoutButton from "../components/LogoutButton";
 import Logout from "../components/Logout";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  const handelCilck = () => {
+    navigate("/Project-0/verses");
+  };
   return (
     <div>
       <div className="w-full relative bg-gray-100 overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[127px] box-border gap-[72px] tracking-[normal] mq450:gap-[18px_72px] mq750:gap-[36px_72px]">
@@ -41,7 +46,10 @@ const HomePage = () => {
             </div>
             <div className="w-[930px] flex items-start mq765:mt-[40px] justify-center max-w-full">
               <button className="cursor-pointer py-3.5 px-5 bg-[transparent] w-[362px] rounded-6xl [background:linear-gradient(92.09deg,_#7d26cd,_#171717)] box-border overflow-hidden shrink-0 flex flex-row items-start justify-center max-w-full border-[1px] border-solid border-gainsboro-100 hover:bg-silver-200 hover:box-border hover:border-[1px] hover:border-solid hover:border-silver-100">
-                <div className=" Bord text-21xl tracking-[0.16em] font-bord-demo text-white text-center cursor-pointer mq450:text-5xl mq1050:text-13xl">
+                <div
+                  onClick={handelCilck}
+                  className=" Bord text-21xl tracking-[0.16em] font-bord-demo text-white text-center cursor-pointer mq450:text-5xl mq1050:text-13xl"
+                >
                   NexT
                 </div>
               </button>

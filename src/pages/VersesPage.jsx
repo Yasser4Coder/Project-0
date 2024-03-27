@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 import "../fonts/bord-demo/Bord.otf";
 import bgimage from "../public/images/background.png";
@@ -8,6 +8,14 @@ import Logout from "../components/Logout";
 import MissionExplanationTech from "../components/MissionExplanationTech";
 
 const VersesPage = () => {
+  useEffect(() => {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      document.documentElement.scrollTop = 0;
+    }
+  });
   return (
     <div>
       <div className="w-full relative bg-gray-100 overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[202px] box-border gap-[79px] tracking-[normal] mq450:gap-[20px_79px] mq750:gap-[39px_79px]">
