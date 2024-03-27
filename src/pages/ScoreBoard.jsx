@@ -8,7 +8,7 @@ import Logout from "../components/Logout";
 const ScoreBoard = () => {
   return (
     <div>
-      <div className="w-full relative max-w-full bg-gray-100 overflow-auto flex flex-col items-start justify-start pt-0 px-0 pb-[173px] box-border gap-[64px] tracking-[normal] mq450:gap-[16px_64px] mq750:gap-[32px_64px]">
+      <div className="w-full relative max-w-full bg-gray-100 overflow-auto flex flex-col items-start justify-start pt-0 px-0 pb-[93px] box-border gap-[64px] tracking-[normal] mq450:gap-[16px_64px] mq750:gap-[32px_64px]">
         <Header image={<LogoutButton />} event={<Logout />} />
         <img
           className="w-full absolute  h-[100vh] !m-[0] top-[0px] right-[0px] left-[0px] max-w-full overflow-hidden shrink-0 object-cover"
