@@ -23,7 +23,7 @@ const LoginPage = () => {
         src={bgimage}
       />
       <Header image={<LoginButton />} event={<Login />} />
-      <main className="self-stretch flex flex-row items-start justify-center py-0 pb-[50px] px-5 box-border max-w-full">
+      <main className="self-stretch flex flex-row items-start justify-center py-0 pb-[25px] px-5 box-border max-w-full">
         <LoginForm />
       </main>
     </div>
