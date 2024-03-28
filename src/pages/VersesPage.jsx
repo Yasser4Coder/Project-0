@@ -18,14 +18,11 @@ const VersesPage = () => {
   });
   return (
     <div>
-      <div className="w-full h-full relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-[202px] box-border gap-[50px] tracking-[normal] mq450:gap-[20px_79px] mq750:gap-[39px_79px]">
+      <div
+        style={{ backgroundImage: `url("${bgimage}")` }}
+        className="w-full h-full min-h-[100vh] relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-[110px] box-border gap-[50px] tracking-[normal] mq450:gap-[20px_79px] mq750:gap-[39px_79px]"
+      >
         <Header image={<LogoutButton />} event={<Logout />} />
-
-        <img
-          className="w-full h-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] max-w-full overflow-hidden max-h-full object-cover"
-          alt=""
-          src={bgimage}
-        />
         <main className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
           <MissionExplanationTech />
         </main>

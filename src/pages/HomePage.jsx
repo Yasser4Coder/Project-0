@@ -14,12 +14,10 @@ const HomePage = () => {
   };
   return (
     <div>
-      <div className="w-full h-full relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-[127px] box-border gap-[72px] tracking-[normal] mq450:gap-[18px_72px] mq750:gap-[36px_72px]">
-        <img
-          className="w-full h-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] max-w-full max-h-full object-cover"
-          alt=""
-          src={bgimage}
-        />
+      <div
+        style={{ backgroundImage: `url("${bgimage}")` }}
+        className="w-full h-full min-h-[100vh] relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-[90px] box-border gap-[72px] tracking-[normal] mq450:gap-[18px_72px] mq750:gap-[36px_72px]"
+      >
         <Header image={<LogoutButton />} event={<Logout />} />
         <main className="self-stretch h-full flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
           <section className="w-[1120px] rounded-9xl bg-gray-100 box-border overflow-hidden shrink-0 flex flex-col items-center justify-start pt-14 px-5 pb-[81px] gap-[70px] max-w-full z-[1] text-center text-45xl text-white font-bord-demo border-[3px] border-solid border-blueviolet-200 lg:pt-9 lg:pb-[53px] lg:box-border">

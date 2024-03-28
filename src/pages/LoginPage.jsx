@@ -16,12 +16,10 @@ const LoginPage = () => {
     }
   });
   return (
-    <div className="w-full h-[130vh] relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-28 box-border gap-[70px] tracking-[normal] mq450:gap-[28px_112px] mq750:gap-[56px_112px]">
-      <img
-        className="w-full h-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] max-w-full overflow-hidden max-h-full object-cover"
-        alt=""
-        src={bgimage}
-      />
+    <div
+      style={{ backgroundImage: `url("${bgimage}")` }}
+      className="bg w-full h-full min-h-[100vh] relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-9 object-cover box-border gap-[70px] tracking-[normal] mq450:gap-[28px_112px] mq750:gap-[56px_112px]"
+    >
       <Header image={<LoginButton />} event={<Login />} />
       <main className="self-stretch flex flex-row items-start justify-center py-0 pb-[25px] px-5 box-border max-w-full">
         <LoginForm />
