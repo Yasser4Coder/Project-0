@@ -13,7 +13,7 @@ const WelcomePage = () => {
   return (
     <div
       style={{ backgroundImage: `url("${bgimage}")` }}
-      className="w-full h-full relative bg-gray-100 flex object-cover flex-col items-start justify-start pt-0 px-0 pb-9 box-border gap-[70px] tracking-[normal] mq450:gap-[28px_112px] mq975:gap-[56px_112px]"
+      className="w-full h-full min-h-[100vh] relative bg-gray-100 flex object-cover flex-col items-start justify-start pt-0 px-0 pb-9 box-border gap-[70px] tracking-[normal] mq450:gap-[28px_112px] mq975:gap-[56px_112px]"
     >
       <Header image={<LoginButton />} event={<Login />} />
       <main className="self-stretch flex flex-row items-start justify-center py-0 px-10 box-border max-w-full">
