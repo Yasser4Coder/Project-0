@@ -6,7 +6,7 @@ const LoginButton = () => {
   const navigate = useNavigate();
 
   const handelClick = () => {
-    navigate("/Project-0/login");
+    navigate("/login");
   };
   return (
     <div>

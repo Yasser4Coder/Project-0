@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 const HomePage = () => {
   const navigate = useNavigate();
   const handelCilck = () => {
-    navigate("/Project-0/verses");
+    navigate("/verses");
   };
   return (
     <div>

@@ -8,7 +8,7 @@ import Login from "../components/Login";
 const WelcomePage = () => {
   const navigate = useNavigate();
   const handelClick = () => {
-    navigate("/Project-0/login");
+    navigate("/login");
   };
   return (
     <div className="w-full h-[100vh] relative bg-gray-100 overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[113px] box-border gap-[70px] tracking-[normal] mq450:gap-[28px_112px] mq975:gap-[56px_112px]">

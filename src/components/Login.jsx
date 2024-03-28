@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div>
-      <Link to={"/Project-0/login"}>Login</Link>
+      <Link to={"/login"}>Login</Link>
     </div>
   );
 };
