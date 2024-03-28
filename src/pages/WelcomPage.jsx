@@ -11,9 +11,9 @@ const WelcomePage = () => {
     navigate("/login");
   };
   return (
-    <div className="w-full h-[100vh] relative bg-gray-100 overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-[113px] box-border gap-[70px] tracking-[normal] mq450:gap-[28px_112px] mq975:gap-[56px_112px]">
+    <div className="w-full h-full relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-[113px] box-border gap-[70px] tracking-[normal] mq450:gap-[28px_112px] mq975:gap-[56px_112px]">
       <img
-        className="w-full h-[100vh] absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] max-w-full overflow-hidden max-h-full object-cover"
+        className="w-full h-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] max-w-full overflow-hidden max-h-full object-cover"
         alt=""
         src={bgimage}
       />
