@@ -8,7 +8,7 @@ const ChallengePage = (props) => {
   return (
     <div
       style={{ backgroundImage: `url("${bgimage}")` }}
-      className="w-full h-full object-cover min-h-[100vh] relative bg-gray-100 overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-28 box-border gap-[112px] tracking-[normal] mq450:gap-[28px_112px] mq750:gap-[56px_112px]"
+      className="w-full h-full bg-no-repeat bg-cover  min-h-[100vh] relative bg-gray-100 overflow-hidden flex flex-col items-start justify-start pt-0 px-0 pb-28 box-border gap-[112px] tracking-[normal] mq450:gap-[28px_112px] mq750:gap-[56px_112px]"
     >
       <Header image={<LogoutButton />} event={<Logout />} />
       <main className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
@@ -16,7 +16,7 @@ const ChallengePage = (props) => {
           <div class="bg-gradient-to-r from-[#7D26CD]  to-[#E2E2E2] px-[5px] py-[5px] rounded-6xl">
           <section className="w-[1100px] mq750:w-[500px] mq450:w-[260px] mx-auto px-[120px] flex flex-col pb-[60px] mq975:px-[40px] items-center text-center  rounded-3xl ok">
           <div className="title Bord mq765:text-[28px] text-inherit font-normal font-inherit text-transparent !bg-clip-text [background:linear-gradient(83.88deg,_#7d26cd,_#e2e2e2)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
-            <h1 class="text-[3.5rem]">Challenge Name</h1>
+            <h1 class="text-[3rem]">Challenge Name</h1>
           </div>
           <div className="per text-white Segoe-semi-bold self-stretch h-full text-[26px] mq765:text-[24px] tracking-[0.13em] inline-block shrink mb-[30px] mq450:text-3xl mq1050:text-10xl">
             <p>

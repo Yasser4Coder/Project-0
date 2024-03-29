@@ -16,7 +16,7 @@ const HomePage = () => {
     <div>
       <div
         style={{ backgroundImage: `url("${bgimage}")` }}
-        className="w-full h-full min-h-[100vh] relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-[90px] box-border gap-[72px] tracking-[normal] mq450:gap-[18px_72px] mq750:gap-[36px_72px]"
+        className="w-full h-full bg-no-repeat bg-cover  min-h-[100vh] relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-[90px] box-border gap-[72px] tracking-[normal] mq450:gap-[18px_72px] mq750:gap-[36px_72px]"
       >
 
         {/*  rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 */}
