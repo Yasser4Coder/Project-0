@@ -11,7 +11,7 @@ const Header = (props) => {
   };
   return (
     <header className="w-full Segoe z-[10] h-[90px] shrink-0 flex items-center [background:linear-gradient(90deg,_#3f1367,_#7d26cd)]">
-      <div className="flex items-center mx-auto pl-[20px] pr-[20px] justify-between w-[1335px] lg:w-[900px]">
+      <div className="flex items-center mx-auto pl-[20px] pr-[20px] justify-between container">
         <div className="logo flex items-center gap-[15px]">
           <img
             className="h-[51px] w-[28.5px] relative z-[2]"

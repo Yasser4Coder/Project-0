@@ -13,7 +13,7 @@ const VersePage = (props) => {
       <Header image={<LogoutButton />} event={<Logout />} />
       <main className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
 
-        <div className="w-[1335px] ">
+        <div className="container">
           {/* body content */}
             <div className="content flex flex-col gap-2">
                 {/*  content */}
