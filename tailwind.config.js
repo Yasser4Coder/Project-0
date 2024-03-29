@@ -9,7 +9,7 @@ module.exports = {
           200: "#070707",
         },
         blueviolet: {
-          100: "#a14af1",
+          100: "linear-gradient(90deg, hsla(271, 69%, 48%, 1) 0%, hsla(0, 0%, 89%, 1) 100%)",
           200: "#7d26cd",
         },
         gainsboro: {

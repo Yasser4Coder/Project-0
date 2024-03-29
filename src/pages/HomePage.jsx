@@ -18,10 +18,14 @@ const HomePage = () => {
         style={{ backgroundImage: `url("${bgimage}")` }}
         className="w-full h-full min-h-[100vh] relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-[90px] box-border gap-[72px] tracking-[normal] mq450:gap-[18px_72px] mq750:gap-[36px_72px]"
       >
+
+        {/*  rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 */}
         <Header image={<LogoutButton />} event={<Logout />} />
-        <main className="self-stretch h-full flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
-          <section className="w-[1120px] rounded-9xl bg-gray-100 box-border overflow-hidden shrink-0 flex flex-col items-center justify-start pt-14 px-5 pb-[81px] gap-[70px] max-w-full z-[1] text-center text-45xl text-white font-bord-demo border-[3px] border-solid border-blueviolet-200 lg:pt-9 lg:pb-[53px] lg:box-border">
-            <div className="w-[930px] flex flex-col items-start justify-start gap-[24px] max-w-full">
+        <main className="self-stretch h-full flex flex-row items-start justify-center  py-0 px-5 box-border max-w-full">
+          {/* card */}
+            <div class="bg-gradient-to-r from-[#7D26CD]  to-[#E2E2E2] px-[5px] py-[5px] rounded-6xl">
+            <section className="w-[1120px]  rounded-6xl bg-gray-100   box-border overflow-hidden shrink-0 flex flex-col items-center justify-start pt-14 px-5 pb-[81px] gap-[70px] max-w-full z-[1] text-center text-45xl text-white lg:pt-9 lg:pb-[53px] lg:box-border">
+            <div className="w-[930px] flex  flex-col items-start justify-start gap-[24px] max-w-full">
               <div className="self-stretch flex flex-row items-start justify-center py-0 pr-[21px] pl-5 box-border max-w-full">
                 <h1 className="m-0 Bord w-[645px] text-inherit tracking-[0.12em] font-normal font-inherit text-transparent !bg-clip-text [background:linear-gradient(83.88deg,_#7d26cd,_#e2e2e2)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block shrink-0 max-w-full mq450:text-19xl mq1050:text-32xl">
                   BasE StorY
@@ -53,6 +57,7 @@ const HomePage = () => {
               </button>
             </div>
           </section>
+            </div>
         </main>
       </div>
     </div>
