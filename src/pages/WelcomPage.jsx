@@ -41,11 +41,11 @@ const WelcomePage = () => {
             </div>
           </div>
           <div className="w-[1104px] flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
-            <button className="cursor-pointer py-3.5 px-5 bg-[transparent] w-[378px] rounded-6xl [background:linear-gradient(92.09deg,_#7d26cd,_#171717)] box-border overflow-hidden shrink-0 flex flex-row items-start justify-center max-w-full z-[1] border-[1px] border-solid border-gainsboro-100 hover:bg-silver-200 hover:box-border hover:border-[1px] hover:border-solid hover:border-silver-100">
-              <div
-                onClick={handelClick}
-                className="relative Bord text-21xl tracking-[0.16em] font-bord-demo text-white text-center cursor-pointer mq450:text-5xl mq975:text-13xl"
-              >
+            <button
+              onClick={handelClick}
+              className="cursor-pointer py-3.5 px-5 bg-[transparent] w-[378px] rounded-6xl [background:linear-gradient(92.09deg,_#7d26cd,_#171717)] box-border overflow-hidden shrink-0 flex flex-row items-start justify-center max-w-full z-[1] border-[1px] border-solid border-gainsboro-100 hover:bg-silver-200 hover:box-border hover:border-[1px] hover:border-solid hover:border-silver-100"
+            >
+              <div className="relative Bord text-21xl tracking-[0.16em] font-bord-demo text-white text-center cursor-pointer mq450:text-5xl mq975:text-13xl">
                 LoGin
               </div>
             </button>
