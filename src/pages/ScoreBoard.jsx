@@ -10,7 +10,7 @@ const ScoreBoard = () => {
     <div>
       <div
         style={{ backgroundImage: `url("${bgimage}")` }}
-        className="bg w-full h-full relative  min-h-[100vh] max-w-full bg-gray-100 overflow-auto flex flex-col items-start justify-start pt-0 px-0 pb-[93px] box-border gap-[64px] tracking-[normal] mq450:gap-[16px_64px] mq750:gap-[32px_64px]"
+        className="bg w-full bg-no-repeat bg-cover  h-full relative  min-h-[100vh] max-w-full bg-gray-100 overflow-auto flex flex-col items-start justify-start pt-0 px-0 pb-[93px] box-border gap-[64px] tracking-[normal] mq450:gap-[16px_64px] mq750:gap-[32px_64px]"
       >
         <Header image={<LogoutButton />} event={<Logout />} />
         <div className="w-[1200px] bg-gradient-to-r from-[#7D26CD]  px-[5px] py-[5px] to-[#E2E2E2]  rounded-6xl z-[5] max-w-full flex mx-auto">
