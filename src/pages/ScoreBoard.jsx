@@ -29,35 +29,57 @@ const ScoreBoard = () => {
                 </div>
                 <div className="table-row">
                   <h1>
-                    <span className="text-white">1</span>
-                    <span className="text-white">.</span>
+                    <span className="text-white one">1</span>
+                    <span className="text-white one">.</span>
                     &nbsp;&nbsp; elec_team
                   </h1>
                   <div className="second text-white">
-                    <h1>4</h1>
+                    <h1 className="one">4</h1>
                     <h1>10000</h1>
                   </div>
                 </div>
                 <div className="table-row">
                   <h1>
-                    <span className="text-white">1</span>
-                    <span className="text-white">.</span>
-                    &nbsp;&nbsp; elec_team
+                    <span className="text-white tow">2</span>
+                    <span className="text-white tow">.</span>
+                    &nbsp;&nbsp; l3s_m1n10ns
                   </h1>
                   <div className="second text-white">
-                    <h1>4</h1>
-                    <h1>10000</h1>
+                    <h1 className="tow">3</h1>
+                    <h1>9500</h1>
                   </div>
                 </div>
                 <div className="table-row">
                   <h1>
-                    <span className="text-white">1</span>
-                    <span className="text-white">.</span>
-                    &nbsp;&nbsp; elec_team
+                    <span className="text-white three">3</span>
+                    <span className="text-white three">.</span>
+                    &nbsp;&nbsp; h1m
                   </h1>
                   <div className="second text-white">
-                    <h1>4</h1>
-                    <h1>10000</h1>
+                    <h1 className="three">2</h1>
+                    <h1>7000</h1>
+                  </div>
+                </div>
+                <div className="table-row">
+                  <h1>
+                    <span className="text-white">4</span>
+                    <span className="text-white">.</span>
+                    &nbsp;&nbsp; 7h3_l4d13s
+                  </h1>
+                  <div className="second text-white">
+                    <h1 className="">2</h1>
+                    <h1>6500</h1>
+                  </div>
+                </div>
+                <div className="table-row">
+                  <h1>
+                    <span className="text-white">5</span>
+                    <span className="text-white">.</span>
+                    &nbsp;&nbsp; m0mm13s
+                  </h1>
+                  <div className="second text-white">
+                    <h1 className="">2</h1>
+                    <h1>6250</h1>
                   </div>
                 </div>
               </div>
