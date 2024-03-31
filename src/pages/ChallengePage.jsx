@@ -14,13 +14,15 @@ const ChallengePage = (props) => {
       <main className="self-stretch flex flex-row items-start justify-center py-0 box-border max-w-full">
         {/* bg card */}
         <div className="w-full max-w-[1200px]  shrink mx-auto flex justify-center">
-          <section className="w-[1200px] mq480:w-[350px] z-[5] bg-gradient-to-r from-[#7D26CD] to-[#E2E2E2] px-[4px] py-[4px] bg-blue-600 mx-[20px] rounded-9xl border-solid box-border">
-            <div className="w-full rounded-6xl flex flex-col justify-starth-full pb-[90px] shrink px-[70px] ok bg-gray-100 items-center text-center text-45xl text-blueviolet-200 box-border mq750:gap-[28px_57px] mq750:pt-[23px] mq750:pb-[73px] mq750:box-border">
+          <section className="w-[1000px] mq480:w-[350px] z-[5] bg-gradient-to-r from-[#7D26CD] to-[#E2E2E2] px-[4px] py-[4px] bg-blue-600 mx-[20px] rounded-9xl border-solid box-border">
+            <div className="w-full rounded-6xl flex flex-col justify-starth-full pb-[50px] shrink px-[70px] mq480:px-[30px] ok bg-gray-100 items-center text-center text-45xl text-blueviolet-200 box-border mq750:gap-[28px_57px] mq750:pt-[23px] mq750:pb-[50px] mq750:box-border">
               <div className="title Bord mq765:text-[28px] text-inherit font-normal font-inherit text-transparent !bg-clip-text [background:linear-gradient(83.88deg,_#7d26cd,_#e2e2e2)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
                 <h1 class="text-[3rem] mq480:text-[2rem]">Challenge Name</h1>
               </div>
-              <div className="per text-start text-white Segoe-semi-bold self-stretch h-full text-[26px] mq765:text-[24px] tracking-[0.13em] inline-block shrink mb-[30px] mq450:text-3xl mq1050:text-10xl">
-                <span className=" capitalize text-[#7D26CD]">challenge script</span>
+              <div className="per text-start text-white Segoe-semi-bold self-stretch h-full text-[26px] mq765:text-[24px] tracking-[0.13em] inline-block shrink mb-[-10px] mq450:text-3xl mq1050:text-10xl">
+                <span className=" capitalize text-[#7D26CD]">
+                  challenge script
+                </span>
                 <p className="mt-3">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   sed facilisis dui. Vivamus quis venenatis nisi. Aenean vel
@@ -40,19 +42,32 @@ const ChallengePage = (props) => {
                 </p>
               </div>
               {/* attached  */}
-             <div className=" w-full flex flex-row justify-items-start">
-             <div className="attached flex flex-col w-[310px] gap-2 ">
-                  <span class="capitalize text-start text-[25px] Segoe-semi-bold self-stretch">attached : </span>
-                  <a href="{}" class="text-[20px] text-start px-6 py-2 bg-[#333333] text-[#5E6EFF] underline capitalize Segoe-semi-bold self-stretch">file</a>
+              <div className=" w-full flex flex-row justify-items-start">
+                <div className="attached flex flex-col w-[310px] gap-2 ">
+                  <span class="capitalize text-start text-[25px] Segoe-semi-bold self-stretch">
+                    attached :{" "}
+                  </span>
+                  <a
+                    href="{}"
+                    class="text-[20px] text-start px-6 py-2 bg-[#333333] text-[#5E6EFF] underline capitalize Segoe-semi-bold self-stretch"
+                  >
+                    file
+                  </a>
+                </div>
               </div>
-             </div>
 
               <div className="w-full">
-              <div className="flex flex-row justify-start">
-                  <p className="text-[25px] mb-[-5px] Segoe-semi-bold self-stretch">Submition format: <span className="text-white">Link / Key</span></p>
-             </div>
+                <div className="flex flex-row justify-start">
+                  <p className="text-[25px] mb-[-5px] Segoe-semi-bold self-stretch">
+                    Submition format:{" "}
+                    <span className="text-white">Link / Key</span>
+                  </p>
+                </div>
               </div>
-              <form action="" className="flex  flex-col items-center gap-[50px]">
+              <form
+                action=""
+                className="flex  flex-col items-center gap-[50px]"
+              >
                 {props.status}
                 <div className="button">
                   <button
