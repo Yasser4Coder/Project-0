@@ -123,3 +123,6 @@ a {
 .three {
   color: #c66cff;
 }
+.challenge-submit-button{
+  background: linear-gradient(90deg, rgba(125,38,205,1) 0%, rgba(23,23,23,0.011642156862745057) 100%);
+}
