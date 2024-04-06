@@ -7,20 +7,6 @@ import Logout from "../components/Logout";
 import axios from "axios";
 
 const ScoreBoard = () => {
-  useEffect(() => {
-    async function getScore() {
-      try {
-        const response = await axios.get(
-          "https://platform-w3l7.onrender.com/api/scoreboard"
-        );
-        console.log(JSON.stringify(response?.data));
-      } catch (error) {
-        console.error(error);
-      }
-    }
-    getScore();
-  });
-
   return (
     <div>
       <div
