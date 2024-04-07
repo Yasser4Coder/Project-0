@@ -18,17 +18,10 @@ const HomePage = () => {
         style={{ backgroundImage: `url("${bgimage}")` }}
         className="w-full h-full bg-no-repeat bg-cover  min-h-[100vh] relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-[90px] box-border gap-[72px] tracking-[normal] mq450:gap-[18px_72px] mq750:gap-[36px_72px]"
       >
-        {/*  rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 */}
-        {/* w-[1200px] lg:w-[990px] mq1025:w-[750px] */}
         <Header image={<LogoutButton />} event={<Logout />} />
         <main className="self-stretch h-full flex flex-row items-start justify-center  py-0 px-5 box-border max-w-full">
-          {/* card */}
-          {/* bg-gradient-to-r from-[#7D26CD] to-[#E2E2E2] px-[5px] py-[5px]
-          rounded-6xl self-stretch flex flex-row items-start justify-center py-0
-          px-10 box-border w-[1200px] lg:w-[990px] mq1025:w-[750px] mx-auto
-          max-w-full */}
           <div
-            class="bg-gradient-to-r from-[#7D26CD] to-[#E2E2E2] px-[5px] py-[5px]
+            className="bg-gradient-to-r from-[#7D26CD] to-[#E2E2E2] px-[5px] py-[5px]
           rounded-6xl self-stretch flex flex-row items-start justify-center py-0
           px-10 box-border w-[1200px] lg:w-[990px] mq1025:w-[750px] mx-auto
           max-w-full"

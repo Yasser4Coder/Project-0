@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import bgimage from "../public/images/background.png";
 import "../fonts/bord-demo/Bord.otf";
@@ -7,6 +7,25 @@ import Logout from "../components/Logout";
 import axios from "axios";
 
 const ScoreBoard = () => {
+  const [first, setFirst] = useState({});
+  const [second, setSecond] = useState({});
+  const [third, setThird] = useState({});
+  const [rest, setRest] = useState([]);
+
+  useEffect(() => {
+    const getScore = async () => {
+      try {
+        const response = await axios.get("api/scoreboard");
+        setFirst(response.data[0]);
+        setSecond(response.data[1]);
+        setThird(response.data[2]);
+        setRest(response.data.slice(3, response.data.length));
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getScore();
+  }, []);
   return (
     <div>
       <div
@@ -28,61 +47,59 @@ const ScoreBoard = () => {
                     <h1>Score</h1>
                   </div>
                 </div>
-                <div className="table-row">
-                  <h1>
-                    <span className="text-white one">1</span>
-                    <span className="text-white one">.</span>
-                    &nbsp;&nbsp; elec_team
-                  </h1>
-                  <div className="second text-white">
-                    <h1 className="one">4</h1>
-                    <h1>10000</h1>
+                {first && (
+                  <div className="table-row">
+                    <h1>
+                      <span className="text-white one">1</span>
+                      <span className="text-white one">.</span>
+                      &nbsp;&nbsp; {first.name}
+                    </h1>
+                    <div className="second text-white">
+                      <h1 className="one">4</h1>
+                      <h1>{first.score}</h1>
+                    </div>
                   </div>
-                </div>
-                <div className="table-row">
-                  <h1>
-                    <span className="text-white tow">2</span>
-                    <span className="text-white tow">.</span>
-                    &nbsp;&nbsp; l3s_m1n10ns
-                  </h1>
-                  <div className="second text-white">
-                    <h1 className="tow">3</h1>
-                    <h1>9500</h1>
+                )}
+                {second && (
+                  <div className="table-row">
+                    <h1>
+                      <span className="text-white tow">2</span>
+                      <span className="text-white tow">.</span>
+                      &nbsp;&nbsp; {second.name}
+                    </h1>
+                    <div className="second text-white">
+                      <h1 className="tow">3</h1>
+                      <h1>{second.score}</h1>
+                    </div>
                   </div>
-                </div>
-                <div className="table-row">
-                  <h1>
-                    <span className="text-white three">3</span>
-                    <span className="text-white three">.</span>
-                    &nbsp;&nbsp; h1m
-                  </h1>
-                  <div className="second text-white">
-                    <h1 className="three">2</h1>
-                    <h1>7000</h1>
+                )}
+                {third && (
+                  <div className="table-row">
+                    <h1>
+                      <span className="text-white three">3</span>
+                      <span className="text-white three">.</span>
+                      &nbsp;&nbsp; {third.name}
+                    </h1>
+                    <div className="second text-white">
+                      <h1 className="three">2</h1>
+                      <h1>{third.score}</h1>
+                    </div>
                   </div>
-                </div>
-                <div className="table-row">
-                  <h1>
-                    <span className="text-white">4</span>
-                    <span className="text-white">.</span>
-                    &nbsp;&nbsp; 7h3_l4d13s
-                  </h1>
-                  <div className="second text-white">
-                    <h1 className="">2</h1>
-                    <h1>6500</h1>
-                  </div>
-                </div>
-                <div className="table-row">
-                  <h1>
-                    <span className="text-white">5</span>
-                    <span className="text-white">.</span>
-                    &nbsp;&nbsp; m0mm13s
-                  </h1>
-                  <div className="second text-white">
-                    <h1 className="">2</h1>
-                    <h1>6250</h1>
-                  </div>
-                </div>
+                )}
+                {rest &&
+                  rest.map((team) => (
+                    <div key={team.id} className="table-row">
+                      <h1>
+                        <span className="text-white">4</span>
+                        <span className="text-white">.</span>
+                        &nbsp;&nbsp; {team.name}
+                      </h1>
+                      <div className="second text-white">
+                        <h1 className="">2</h1>
+                        <h1>{team.score}</h1>
+                      </div>
+                    </div>
+                  ))}
               </div>
             </div>
           </section>

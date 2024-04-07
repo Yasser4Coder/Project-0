@@ -1,12 +1,49 @@
 import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [ErrMsg, setErrMsg] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const { data } = await axios.post("auth/signin", {
+        name,
+        password,
+      });
+
+      axios.defaults.headers.common[
+        "Authorization"
+      ] = `Bearer ${data["token"]}`;
+      navigate("/home");
+    } catch (err) {
+      if (!err?.response) {
+        setErrMsg("Wrong Name or Password");
+      } else if (err.response?.status === 400) {
+        setErrMsg("Missing Username or Password");
+      } else if (err.response?.status === 401) {
+        setErrMsg("Unauthorized");
+      } else {
+        setErrMsg("Login Failed");
+      }
+      setTimeout(() => {
+        setErrMsg("");
+      }, 4000);
+    }
+  };
   return (
     <form
-      // onSubmit={handelSubmit}
+      onSubmit={handleSubmit}
       className="w-[1120px] rounded-9xl box-border overflow-hidden shrink-0 flex flex-col items-center justify-start px-5 gap-[67px] max-w-full z-[1] text-center text-56xl text-gainsboro-200 bg-gradient-to-r from-[#7D26CD]  to-[#E2E2E2] px-[5px] py-[5px] rounded-6xl mq450:gap-[17px_67px] mq750:gap-[33px_67px] mq750:box-border"
     >
       <div className="rounded-9xl bg-gray-100 w-full h-full box-border overflow-hidden shrink-0 flex flex-col items-center justify-start pt-16 px-5 pb-[111px] gap-[20px] max-w-full z-[1] text-center text-56xl text-gainsboro-200 font-bord-demo mq450:gap-[17px_67px] mq750:gap-[33px_67px] mq750:pt-[42px] mq750:pb-[72px] mq750:box-border">
+        {ErrMsg && (
+          <p className="text-[25px] Segoe-semi-bold text-red-700">{ErrMsg}</p>
+        )}
         <div className="w-[742px] flex flex-col items-start justify-start gap-[48px] max-w-full mq750:gap-[24px_48px]">
           <div className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
             <h1 className="m-0 Bord h-20 w-[400px] relative text-inherit tracking-[0.1em] font-normal font-inherit text-transparent !bg-clip-text [background:linear-gradient(83.88deg,_#7d26cd,_#e2e2e2)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block shrink-0 max-w-full mq450:text-26xl mq750:text-41xl">
@@ -22,7 +59,7 @@ const LoginForm = () => {
                 type="text"
                 id="name"
                 name="name"
-                // onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setName(e.target.value)}
                 required
               />
             </div>
@@ -36,7 +73,7 @@ const LoginForm = () => {
                 type="password"
                 id="password"
                 name="password"
-                // onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
                 required
               />
             </div>

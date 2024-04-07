@@ -4,10 +4,22 @@ import "../fonts/bord-demo/Bord.otf";
 import bgimage from "../public/images/background.png";
 import LogoutButton from "../components/LogoutButton";
 import Logout from "../components/Logout";
+import axios from "axios";
 
 import MissionExplanationTech from "../components/MissionExplanationTech";
 
 const VersesPage = () => {
+  useEffect(() => {
+    const getVerses = async () => {
+      try {
+        const response = await axios.get("/api/verses");
+        console.log(response);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getVerses();
+  }, []);
   useEffect(() => {
     if (
       document.body.scrollTop > 20 ||
@@ -15,7 +27,7 @@ const VersesPage = () => {
     ) {
       document.documentElement.scrollTop = 0;
     }
-  });
+  }, []);
   return (
     <div>
       <div
