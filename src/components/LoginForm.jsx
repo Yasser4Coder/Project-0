@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie"; // Import Cookies library
 
 const LoginForm = () => {
   const [name, setName] = useState("");
@@ -16,10 +17,10 @@ const LoginForm = () => {
         password,
       });
 
-      axios.defaults.headers.common[
-        "Authorization"
-      ] = `Bearer ${data["token"]}`;
+      const token = data.token;
+      Cookies.set("token", token); 
       navigate("/home");
+
     } catch (err) {
       if (!err?.response) {
         setErrMsg("Wrong Name or Password");
@@ -45,7 +46,7 @@ const LoginForm = () => {
           <p className="text-[25px] Segoe-semi-bold text-red-700">{ErrMsg}</p>
         )}
         <div className="w-[742px] flex flex-col items-start justify-start gap-[48px] max-w-full mq750:gap-[24px_48px]">
-          <div className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
+          <div className="box-border flex flex-row items-start self-stretch justify-center max-w-full px-5 py-0">
             <h1 className="m-0 Bord h-20 w-[400px] relative text-inherit tracking-[0.1em] font-normal font-inherit text-transparent !bg-clip-text [background:linear-gradient(83.88deg,_#7d26cd,_#e2e2e2)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block shrink-0 max-w-full mq450:text-26xl mq750:text-41xl">
               LoGin
             </h1>
