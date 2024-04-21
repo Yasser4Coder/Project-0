@@ -10,7 +10,7 @@ const Header = (props) => {
     setToggel(!toggel);
   };
   return (
-    <header className="w-full Segoe z-[10] h-[90px] shrink-0 flex items-center [background:linear-gradient(90deg,_#3f1367,_#7d26cd)]">
+    <header className="w-full Segoe z-[10] h-[70px] shrink-0 flex items-center [background:linear-gradient(90deg,_#3f1367,_#7d26cd)]">
       <div className="flex items-center mx-auto pl-[20px] pr-[20px] justify-between container">
         <div className="logo flex items-center gap-[15px]">
           <img
@@ -38,7 +38,7 @@ const Header = (props) => {
             src={icon}
           />
           {toggel && (
-            <div className="dropdown cursor-pointer absolute bg-red-600 items-center rounded-xl justify-center w-[200px] pt-[25px] pb-[25px] flex flex-col gap-[30px] right-[0px] border-[3px] border-solid border-darkblue [background:linear-gradient(90deg,_#7d26cd,_#171717)]">
+            <div className="dropdown z-[10] cursor-pointer absolute bg-red-600 items-center rounded-xl justify-center w-[200px] pt-[25px] pb-[25px] flex flex-col gap-[30px] right-[0px] border-[3px] border-solid border-darkblue [background:linear-gradient(90deg,_#7d26cd,_#171717)]">
               <Link to={"/home"}>Home</Link>
               <Link to={"/scoreboard"}>Scoreboard</Link>
               <Link to={"/verses"}>Verses</Link>

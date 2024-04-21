@@ -16,14 +16,14 @@ const HomePage = () => {
     <div>
       <div
         style={{ backgroundImage: `url("${bgimage}")` }}
-        className="w-full h-full bg-no-repeat bg-cover  min-h-[100vh] relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-[90px] box-border gap-[72px] tracking-[normal] mq450:gap-[18px_72px] mq750:gap-[36px_72px]"
+        className="w-full h-full bg-no-repeat bg-cover  min-h-[100vh] relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-[90px] box-border gap-[52px] tracking-[normal] mq450:gap-[18px_72px] mq750:gap-[36px_72px]"
       >
         <Header image={<LogoutButton />} event={<Logout />} />
         <main className="self-stretch h-full flex flex-row items-start justify-center  py-0 px-5 box-border max-w-full">
           <div
             className="bg-gradient-to-r from-[#7D26CD] to-[#E2E2E2] px-[5px] py-[5px]
           rounded-6xl self-stretch flex flex-row items-start justify-center py-0
-          px-10 box-border w-[1200px] lg:w-[990px] mq1025:w-[750px] mx-auto
+          px-10 box-border w-[1024px] lg:w-[990px] mq1025:w-[750px] mx-auto
           max-w-full"
           >
             <section className="w-full rounded-6xl bg-gray-100 box-border overflow-hidden shrink-0 flex flex-col items-center justify-start pt-14 px-5 pb-[81px] gap-[70px] max-w-full z-[1] text-center text-45xl text-white lg:pt-9 lg:pb-[53px] lg:box-border">
@@ -33,7 +33,7 @@ const HomePage = () => {
                     BasE StorY
                   </h1>
                 </div>
-                <h1 className="m-0 Segoe self-stretch h-full text-17xl  tracking-[0.13em] inline-block shrink-0 mb-[30px] mq450:text-3xl mq1050:text-10xl">
+                <h1 className="m-0 Segoe self-stretch h-full text-[32px]  tracking-[0.13em] inline-block shrink-0 mb-[30px] mq450:text-3xl mq1050:text-10xl">
                   Vegapunk attempted to discover the world's secret by building
                   a time machine, but his experiment went awry, leading in the
                   creation of a space-time machine that united four universes:
