@@ -46,7 +46,7 @@ const LoginForm = () => {
             LoGin
           </h1>
         </div>
-        <div className="bg-gradient-to-r mb-[30px] max-w-[710px] mx-auto from-[#7D26CD] to-[#E2E2E2] px-[2px] py-[3px] rounded-6xl self-stretch rounded-13xl bg-gray-200 box-border max-w-full">
+        <div className="bg-gradient-to-r mb-[30px] max-w-[700px] mx-auto from-[#7D26CD] to-[#E2E2E2] px-[2px] py-[3px] rounded-6xl self-stretch rounded-13xl bg-gray-200 box-border max-w-full">
           <div className="bg-gray-200 rounded-6xl box-border flex itmes-center px-[20px] py-[20px]">
             <div className="h-24 relative rounded-13xl bg-gray-200 box-border hidden max-w-full border-[2px] border-solid border-blueviolet-200" />
             <input
@@ -60,7 +60,7 @@ const LoginForm = () => {
             />
           </div>
         </div>
-        <div className="bg-gradient-to-r max-w-[710px] mx-auto from-[#7D26CD] to-[#E2E2E2] px-[2px] py-[3px] rounded-6xl self-stretch rounded-13xl bg-gray-200 box-border max-w-full">
+        <div className="bg-gradient-to-r max-w-[700px] mx-auto from-[#7D26CD] to-[#E2E2E2] px-[2px] py-[3px] rounded-6xl self-stretch rounded-13xl bg-gray-200 box-border max-w-full">
           <div className="bg-gray-200 rounded-6xl box-border flex itmes-center px-[20px] py-[20px]">
             <div className="h-24 relative rounded-13xl bg-gray-200 box-border hidden max-w-full border-[2px] border-solid border-blueviolet-200" />
             <input
