@@ -5,7 +5,13 @@ import "../fonts/SegoeUI-VF/Segoe-UI-Variable-Static-Small-Light.ttf";
 import { useNavigate } from "react-router-dom";
 import LoginButton from "../components/LoginButton";
 import Login from "../components/Login";
+import Cookies from "js-cookie";
+import { useEffect } from "react";
+
 const WelcomePage = () => {
+  useEffect(() => {
+    Cookies.remove("token");
+  });
   const navigate = useNavigate();
   const handelClick = () => {
     navigate("/login");

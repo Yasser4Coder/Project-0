@@ -20,7 +20,7 @@ const Header = (props) => {
             src={logoimage}
           />
           <div className="cursor-pointer tracking-[0.24em] text-[22px] z-[3]">
-            <Link to={"/"}>PROJECT-0</Link>
+            <Link to={"/home"}>PROJECT-0</Link>
           </div>
         </div>
         <div className="links flex items-center mq653:hidden gap-[50px]">

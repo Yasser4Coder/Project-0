@@ -5,23 +5,31 @@ import "../fonts/bord-demo/Bord.otf";
 import LogoutButton from "../components/LogoutButton";
 import Logout from "../components/Logout";
 import axios from "axios";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const ScoreBoard = () => {
   const [first, setFirst] = useState({});
   const [second, setSecond] = useState({});
   const [third, setThird] = useState({});
   const [rest, setRest] = useState([]);
+  const navigate = useNavigate();
 
+  const token = Cookies.get("token");
   useEffect(() => {
     const getScore = async () => {
       try {
-        const response = await axios.get("api/scoreboard");
+        const response = await axios.get("api/scoreboard", {
+          headers: {
+            Authorization: `token ${token}`,
+          },
+        });
         setFirst(response.data[0]);
         setSecond(response.data[1]);
         setThird(response.data[2]);
         setRest(response.data.slice(3, response.data.length));
       } catch (err) {
-        console.log(err);
+        navigate("/login");
       }
     };
     getScore();

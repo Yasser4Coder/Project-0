@@ -39,6 +39,17 @@ const App = () => {
               />
             }
           />
+          <Route
+            path="/Sherlock-Holmes"
+            element={
+              <VersePage
+                title={"One Piece"}
+                para={
+                  "Vegapunk resolved to create the solution's mind and discovered that the Gorosei held the relevant data."
+                }
+              />
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>
