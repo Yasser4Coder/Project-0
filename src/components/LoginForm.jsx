@@ -42,11 +42,11 @@ const LoginForm = () => {
           <p className="text-[25px] Segoe-semi-bold text-red-700">{ErrMsg}</p>
         )}
         <div className="mb-[5px]">
-          <h1 className="text-inherit text-[3.8rem] tracking-[0.1em] font-normal font-inherit text-transparent !bg-clip-text [background:linear-gradient(83.88deg,_#7d26cd,_#e2e2e2)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block shrink-0 max-w-full mq450:text-26xl mq750:text-41xl">
+          <h1 className="text-inherit tx tracking-[0.1em] font-normal font-inherit text-transparent !bg-clip-text [background:linear-gradient(83.88deg,_#7d26cd,_#e2e2e2)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block shrink-0 max-w-full mq450:text-26xl mq750:text-41xl">
             LoGin
           </h1>
         </div>
-        <div className="bg-gradient-to-r mb-[30px] max-w-[700px] mx-auto from-[#7D26CD] to-[#E2E2E2] px-[2px] py-[3px] rounded-6xl self-stretch rounded-13xl bg-gray-200 box-border max-w-full">
+        <div className="bg-gradient-to-r mb-[30px] wid mx-auto from-[#7D26CD] to-[#E2E2E2] px-[2px] py-[3px] rounded-6xl self-stretch rounded-13xl bg-gray-200 box-border max-w-full">
           <div className="bg-gray-200 rounded-6xl box-border flex itmes-center px-[20px] py-[20px]">
             <div className="h-24 relative rounded-13xl bg-gray-200 box-border hidden max-w-full border-[2px] border-solid border-blueviolet-200" />
             <input
@@ -60,7 +60,7 @@ const LoginForm = () => {
             />
           </div>
         </div>
-        <div className="bg-gradient-to-r max-w-[700px] mx-auto from-[#7D26CD] to-[#E2E2E2] px-[2px] py-[3px] rounded-6xl self-stretch rounded-13xl bg-gray-200 box-border max-w-full">
+        <div className="bg-gradient-to-r mx-auto wid from-[#7D26CD] to-[#E2E2E2] px-[2px] py-[3px] rounded-6xl self-stretch rounded-13xl bg-gray-200 box-border max-w-full">
           <div className="bg-gray-200 rounded-6xl box-border flex itmes-center px-[20px] py-[20px]">
             <div className="h-24 relative rounded-13xl bg-gray-200 box-border hidden max-w-full border-[2px] border-solid border-blueviolet-200" />
             <input
