@@ -20,7 +20,7 @@ const VersesPage = () => {
     <div>
       <div
         style={{ backgroundImage: `url("${bgimage}")` }}
-        className="w-full bg-no-repeat bg-cover  h-full min-h-[100vh] relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-[110px] box-border gap-[20px] tracking-[normal] mq450:gap-[20px_79px] mq750:gap-[39px_79px]"
+        className="w-full bg-no-repeat bg-cover  h-full min-h-screen relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-[110px] box-border gap-[20px] tracking-[normal] mq450:gap-[20px_79px] mq750:gap-[39px_79px]"
       >
         <Header image={<LogoutButton />} event={<Logout />} />
         <main className="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">

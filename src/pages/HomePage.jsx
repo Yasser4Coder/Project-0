@@ -16,7 +16,7 @@ const HomePage = () => {
     <div>
       <div
         style={{ backgroundImage: `url("${bgimage}")` }}
-        className="w-full h-full bg-no-repeat bg-cover  min-h-[100vh] relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-[90px] box-border gap-[52px] tracking-[normal] mq450:gap-[18px_72px] mq750:gap-[36px_72px]"
+        className="w-full h-full bg-no-repeat bg-cover  min-h-screen relative bg-gray-100 flex flex-col items-start justify-start pt-0 px-0 pb-[90px] box-border gap-[52px] tracking-[normal] mq450:gap-[18px_72px] mq750:gap-[36px_72px]"
       >
         <Header image={<LogoutButton />} event={<Logout />} />
         <main className="self-stretch h-full flex flex-row items-start justify-center  py-0 px-5 box-border max-w-full">

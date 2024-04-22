@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import WelcomPage from "./pages/WelcomPage";
 import LoginPage from "./pages/LoginPage";
 import VersesPage from "./pages/VersesPage";
@@ -9,15 +9,16 @@ import ChallengePage from "./pages/ChallengePage";
 import VersePage from "./pages/VersePage";
 import ChallengeInput from "./components/ChallengeInput";
 import ChallengeSolved from "./components/ChallengeSolved";
+import PrivateRoute from "./context/PrivateRoute";
 
 const App = () => {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<WelcomPage />} />
+    <>
+      <Routes>
+        <Route path="/" element={<WelcomPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/" element={<PrivateRoute />}>
           <Route path="/home" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
           <Route path="/verses" element={<VersesPage />} />
           <Route path="/scoreboard" element={<ScoreBoard />} />
           <Route
@@ -29,9 +30,9 @@ const App = () => {
             element={<ChallengePage status={<ChallengeSolved />} />}
           />
           <Route path="/verses/:id" element={<VersePage />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+        </Route>
+      </Routes>
+    </>
   );
 };
 
