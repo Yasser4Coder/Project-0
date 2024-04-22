@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const MissionExplanationTech = () => {
   const navigate = useNavigate();
@@ -34,15 +34,16 @@ const MissionExplanationTech = () => {
       </div>
       <div className="verses w-full flex flex-col gap-[50px]">
         {verses &&
-          verses.map((verse) => (
-            <div
-              key={verse.id}
+          verses.map((verse, index) => (
+            <Link
+              to={`/verses/${verse.id}`}
+              key={index}
               className="px-[3px] py-[3px] rounded-6xl bg-gradient-to-r from-[#7D26CD] to-[#E2E2E2]"
             >
               <div className="vers cursor-pointer text-[16px] lg:text-[10px] mq975:text-[8px] text-white Bord px-[10px] py-[10px] [background:linear-gradient(90deg,_#7d26cd,_#171717)] rounded-3xl">
                 <h1>{verse.title}</h1>
               </div>
-            </div>
+            </Link>
           ))}
       </div>
     </div>

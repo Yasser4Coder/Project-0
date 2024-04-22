@@ -28,28 +28,7 @@ const App = () => {
             path="/challenge!solved"
             element={<ChallengePage status={<ChallengeSolved />} />}
           />
-          <Route
-            path="/One-piece"
-            element={
-              <VersePage
-                title={"One Piece"}
-                para={
-                  "Vegapunk resolved to create the solution's mind and discovered that the Gorosei held the relevant data."
-                }
-              />
-            }
-          />
-          <Route
-            path="/Sherlock-Holmes"
-            element={
-              <VersePage
-                title={"One Piece"}
-                para={
-                  "Vegapunk resolved to create the solution's mind and discovered that the Gorosei held the relevant data."
-                }
-              />
-            }
-          />
+          <Route path="/verses/:id" element={<VersePage />} />
         </Routes>
       </BrowserRouter>
     </div>
