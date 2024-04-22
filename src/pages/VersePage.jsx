@@ -3,13 +3,20 @@ import Header from "../components/Header";
 import bgimage from "../public/images/background.png";
 import LogoutButton from "../components/LogoutButton";
 import Logout from "../components/Logout";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import Cookies from "js-cookie";
 
 const VersePage = (props) => {
+  useEffect(() => {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      document.documentElement.scrollTop = 0;
+    }
+  }, []);
   const token = Cookies.get("token");
-  const navigate = useNavigate();
   const { id } = useParams();
   useEffect(() => {
     const getChallenges = async () => {
@@ -21,7 +28,7 @@ const VersePage = (props) => {
         });
         console.log(response.data);
       } catch (err) {
-        navigate("/login");
+        console.log(err);
       }
     };
     getChallenges();

@@ -17,7 +17,7 @@ const MissionExplanationTech = () => {
         });
         setVerses(response.data);
       } catch (err) {
-        navigate("/login");
+        console.log(err);
       }
     };
     getVerses();

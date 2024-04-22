@@ -29,7 +29,7 @@ const ScoreBoard = () => {
         setThird(response.data[2]);
         setRest(response.data.slice(3, response.data.length));
       } catch (err) {
-        navigate("/login");
+        console.log(err)
       }
     };
     getScore();
