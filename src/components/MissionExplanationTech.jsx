@@ -8,20 +8,25 @@ const MissionExplanationTech = () => {
   const token = Cookies.get("token");
   const [verses, setVerses] = useState();
   useEffect(() => {
-    const getVerses = async () => {
-      try {
-        const response = await axios.get("/api/verses", {
-          headers: {
-            Authorization: `token ${token}`,
-          },
-        });
+  const getVerses = async () => {
+    try {
+      const response = await axios.get("/api/verses", {
+        headers: {
+          Authorization: `token ${token}`,
+        },
+      });
+      console.log(response.data);
+      if (Array.isArray(response.data)) {
         setVerses(response.data);
-      } catch (err) {
-        console.log(err);
+      } else {
+        console.error("Invalid response data format. Expected an array.");
       }
-    };
-    getVerses();
-  }, []);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  getVerses();
+}, []);
   return (
     <div className="conatiner relative z-[9] w-[1000px] mq1025:w-[750px] m-auto flex flex-col items-center text-center ">
       <div className="titel mq975:text-[24px] Bord m-0 Bord text-inherit tracking-[0.12em] font-inherit text-transparent !bg-clip-text [background:linear-gradient(83.88deg,_#7d26cd,_#e2e2e2)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
@@ -34,10 +39,10 @@ const MissionExplanationTech = () => {
       </div>
       <div className="verses w-full flex flex-col gap-[50px]">
         {verses &&
-          verses.map((verse, index) => (
+          verses.map((verse) => (
             <Link
               to={`/verses/${verse.id}`}
-              key={index}
+              key={verse.id}
               className="px-[3px] py-[3px] rounded-6xl bg-gradient-to-r from-[#7D26CD] to-[#E2E2E2]"
             >
               <div className="vers cursor-pointer text-[16px] lg:text-[10px] mq975:text-[8px] text-white Bord px-[10px] py-[10px] [background:linear-gradient(90deg,_#7d26cd,_#171717)] rounded-3xl">
