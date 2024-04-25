@@ -37,8 +37,6 @@ const ScoreBoard = () => {
         setSix(response.data[5]);
         setSeven(response.data[6]);
         setEight(response.data[7]);
-        setNine(response.data[8]);
-        setTen(response.data[9]);
       } catch (err) {
         console.log(err);
       }
@@ -167,32 +165,6 @@ const ScoreBoard = () => {
                     <div className="second text-white">
                       <h1 className="three">2</h1>
                       <h1>{eight.score}</h1>
-                    </div>
-                  </div>
-                )}
-                {Nine && (
-                  <div className="table-row">
-                    <h1>
-                      <span className="text-white">9</span>
-                      <span className="text-white">.</span>
-                      &nbsp;&nbsp; {Nine.name}
-                    </h1>
-                    <div className="second text-white">
-                      <h1 className="three">2</h1>
-                      <h1>{Nine.score}</h1>
-                    </div>
-                  </div>
-                )}
-                {Ten && (
-                  <div className="table-row">
-                    <h1>
-                      <span className="text-white">10</span>
-                      <span className="text-white">.</span>
-                      &nbsp;&nbsp; {Ten.name}
-                    </h1>
-                    <div className="second text-white">
-                      <h1 className="three">2</h1>
-                      <h1>{Ten.score}</h1>
                     </div>
                   </div>
                 )}
