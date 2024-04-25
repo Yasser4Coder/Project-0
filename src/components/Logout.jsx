@@ -7,6 +7,7 @@ const Logout = () => {
   const navigate = useNavigate();
   const logout = () => {
     navigate("/");
+    Cookies.remove("Token");
   };
 
   return (

@@ -12,8 +12,13 @@ const ScoreBoard = () => {
   const [first, setFirst] = useState({});
   const [second, setSecond] = useState({});
   const [third, setThird] = useState({});
-  const [rest, setRest] = useState([]);
-  const navigate = useNavigate();
+  const [For, setFor] = useState({});
+  const [Five, setFive] = useState({});
+  const [Six, setSix] = useState({});
+  const [Seven, setSeven] = useState({});
+  const [eight, setEight] = useState({});
+  const [Nine, setNine] = useState({});
+  const [Ten, setTen] = useState({});
 
   const token = Cookies.get("token");
   useEffect(() => {
@@ -27,9 +32,15 @@ const ScoreBoard = () => {
         setFirst(response.data[0]);
         setSecond(response.data[1]);
         setThird(response.data[2]);
-        setRest(response.data.slice(3, response.data.length));
+        setFor(response.data[3]);
+        setFive(response.data[4]);
+        setSix(response.data[5]);
+        setSeven(response.data[6]);
+        setEight(response.data[7]);
+        setNine(response.data[8]);
+        setTen(response.data[9]);
       } catch (err) {
-        console.log(err)
+        console.log(err);
       }
     };
     getScore();
@@ -94,20 +105,97 @@ const ScoreBoard = () => {
                     </div>
                   </div>
                 )}
-                {rest &&
-                  rest.map((team) => (
-                    <div key={team.id} className="table-row">
-                      <h1>
-                        <span className="text-white">4</span>
-                        <span className="text-white">.</span>
-                        &nbsp;&nbsp; {team.name}
-                      </h1>
-                      <div className="second text-white">
-                        <h1 className="">2</h1>
-                        <h1>{team.score}</h1>
-                      </div>
+                {For && (
+                  <div className="table-row">
+                    <h1>
+                      <span className="text-white">4</span>
+                      <span className="text-white">.</span>
+                      &nbsp;&nbsp; {For.name}
+                    </h1>
+                    <div className="second text-white">
+                      <h1 className="three">2</h1>
+                      <h1>{For.score}</h1>
                     </div>
-                  ))}
+                  </div>
+                )}
+                {Five && (
+                  <div className="table-row">
+                    <h1>
+                      <span className="text-white">5</span>
+                      <span className="text-white">.</span>
+                      &nbsp;&nbsp; {Five.name}
+                    </h1>
+                    <div className="second text-white">
+                      <h1 className="three">2</h1>
+                      <h1>{Five.score}</h1>
+                    </div>
+                  </div>
+                )}
+                {Six && (
+                  <div className="table-row">
+                    <h1>
+                      <span className="text-white">6</span>
+                      <span className="text-white">.</span>
+                      &nbsp;&nbsp; {Six.name}
+                    </h1>
+                    <div className="second text-white">
+                      <h1 className="three">2</h1>
+                      <h1>{Six.score}</h1>
+                    </div>
+                  </div>
+                )}
+                {Seven && (
+                  <div className="table-row">
+                    <h1>
+                      <span className="text-white">7</span>
+                      <span className="text-white">.</span>
+                      &nbsp;&nbsp; {Seven.name}
+                    </h1>
+                    <div className="second text-white">
+                      <h1 className="three">2</h1>
+                      <h1>{Seven.score}</h1>
+                    </div>
+                  </div>
+                )}
+                {eight && (
+                  <div className="table-row">
+                    <h1>
+                      <span className="text-white">8</span>
+                      <span className="text-white">.</span>
+                      &nbsp;&nbsp; {eight.name}
+                    </h1>
+                    <div className="second text-white">
+                      <h1 className="three">2</h1>
+                      <h1>{eight.score}</h1>
+                    </div>
+                  </div>
+                )}
+                {Nine && (
+                  <div className="table-row">
+                    <h1>
+                      <span className="text-white">9</span>
+                      <span className="text-white">.</span>
+                      &nbsp;&nbsp; {Nine.name}
+                    </h1>
+                    <div className="second text-white">
+                      <h1 className="three">2</h1>
+                      <h1>{Nine.score}</h1>
+                    </div>
+                  </div>
+                )}
+                {Ten && (
+                  <div className="table-row">
+                    <h1>
+                      <span className="text-white">10</span>
+                      <span className="text-white">.</span>
+                      &nbsp;&nbsp; {Ten.name}
+                    </h1>
+                    <div className="second text-white">
+                      <h1 className="three">2</h1>
+                      <h1>{Ten.score}</h1>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </section>
