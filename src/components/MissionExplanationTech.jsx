@@ -7,26 +7,28 @@ const MissionExplanationTech = () => {
   const navigate = useNavigate();
   const token = Cookies.get("token");
   const [verses, setVerses] = useState();
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-  const getVerses = async () => {
-    try {
-      const response = await axios.get("/api/verses", {
-        headers: {
-          Authorization: `token ${token}`,
-        },
-      });
-      console.log(response.data);
-      if (Array.isArray(response.data)) {
-        setVerses(response.data);
-      } else {
-        console.error("Invalid response data format. Expected an array.");
+    const getVerses = async () => {
+      try {
+        const response = await axios.get("/api/verses", {
+          headers: {
+            Authorization: `token ${token}`,
+          },
+        });
+        console.log(response.data);
+        if (Array.isArray(response.data)) {
+          setVerses(response.data);
+          setIsLoading(false);
+        } else {
+          console.error("Invalid response data format. Expected an array.");
+        }
+      } catch (err) {
+        console.log(err);
       }
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  getVerses();
-}, []);
+    };
+    getVerses();
+  }, []);
   return (
     <div className="conatiner relative z-[9] w-[1000px] mq1025:w-[750px] m-auto flex flex-col items-center text-center ">
       <div className="titel mq975:text-[24px] Bord m-0 Bord text-inherit tracking-[0.12em] font-inherit text-transparent !bg-clip-text [background:linear-gradient(83.88deg,_#7d26cd,_#e2e2e2)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
@@ -38,7 +40,7 @@ const MissionExplanationTech = () => {
         <p>Each character explains their part in saving the world.</p>
       </div>
       <div className="verses w-full flex flex-col gap-[50px]">
-        {verses &&
+        {!isLoading ? (
           verses.map((verse) => (
             <Link
               to={`/verses/${verse.id}`}
@@ -49,7 +51,26 @@ const MissionExplanationTech = () => {
                 <h1>{verse.title}</h1>
               </div>
             </Link>
-          ))}
+          ))
+        ) : (
+          <div className="flex flex-col items-center justify-center">
+            <p className="text-white Segoe-semi-bold">Loading verses</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#7D26CD"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className={"animate-spin"}
+            >
+              <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+            </svg>
+          </div>
+        )}
       </div>
     </div>
   );

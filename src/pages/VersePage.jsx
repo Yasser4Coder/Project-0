@@ -1,15 +1,16 @@
-import React, { useEffect , useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import bgimage from "../public/images/background.png";
 import LogoutButton from "../components/LogoutButton";
 import Logout from "../components/Logout";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import Cookies from "js-cookie";
 
 const VersePage = (props) => {
   const [verse, setVerse] = useState();
-  
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     if (
       document.body.scrollTop > 20 ||
@@ -28,8 +29,9 @@ const VersePage = (props) => {
             Authorization: `token ${token}`,
           },
         });
-        console.log(response.data)
+        console.log(response.data);
         setVerse(response.data);
+        setIsLoading(false);
       } catch (err) {
         console.log(err);
       }
@@ -52,7 +54,7 @@ const VersePage = (props) => {
               <h2 className="capitilize Bord text-[4rem]  !bg-clip-text [background:linear-gradient(83.88deg,#7d26cd,#e2e2e2)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] m-0">
                 {id == 1
                   ? "One Piece"
-                  : id ==2
+                  : id == 2
                   ? "Sherlock HOlmes"
                   : id == 3
                   ? "WatcH DOgS"
@@ -75,18 +77,46 @@ const VersePage = (props) => {
 
             {/* cards  */}
 
-            {verse && verse.challenges ? (
+            {!isLoading ? (
               <div className="cards mt-[30px] grid grid-cols-3 gap-7">
-                {verse.challenges.map((challenge, index) => (
-                  <div
-                    key={index}
-                    className="cursor-pointer bg-[#0D6842] border-[3px] border-solid border-[#7D26CD] rounded-[2.5rem] h-[300px]"
+                {verse.map((challenge, index) => (
+                  <Link
+                    to={{
+                      pathname: `/challenge/${challenge.id}`,
+                      search: `?verse=${id}`,
+                    }}
                   >
-                  </div>
+                    <div
+                      key={index}
+                      className={`cursor-pointer flex flex-col items-center justify-center ${
+                        !challenge.total_points === 500
+                          ? `bg-[#2D0A4E] border-[#7D26CD]`
+                          : `bg-[#0D6842] border-[#26CD87]`
+                      }  border-[3px] border-solid rounded-[2.5rem] h-[250px]`}
+                    >
+                      <p className="text-white Bord">{challenge.title}</p>
+                    </div>
+                  </Link>
                 ))}
               </div>
             ) : (
-              <p className=" text-[20px] Segoe-meduim tracking-wider text-white w-[1060px]">No challenges available for this verse. Wait for the wave to come!</p>
+              <div className="flex items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  {...props}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#ffffff"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={"animate-spin"}
+                >
+                  <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+                </svg>
+              </div>
             )}
           </div>
         </div>
@@ -96,6 +126,3 @@ const VersePage = (props) => {
 };
 
 export default VersePage;
-
-
-

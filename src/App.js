@@ -10,19 +10,22 @@ import VersePage from "./pages/VersePage";
 import ChallengeInput from "./components/ChallengeInput";
 import ChallengeSolved from "./components/ChallengeSolved";
 import PrivateRoute from "./context/PrivateRoute";
+import PublicRoute from "./context/PublicRoute";
 
 const App = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<WelcomPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route element={<PublicRoute />}>
+          <Route path="/login" element={<LoginPage />} />
+        </Route>
         <Route path="/" element={<PrivateRoute />}>
           <Route path="/home" element={<HomePage />} />
           <Route path="/verses" element={<VersesPage />} />
           <Route path="/scoreboard" element={<ScoreBoard />} />
           <Route
-            path="/challenge"
+            path="/challenge/:id"
             element={<ChallengePage status={<ChallengeInput />} />}
           />
           <Route
