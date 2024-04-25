@@ -81,27 +81,23 @@ const ChallengePage = (props) => {
           },
         }
       );
-  
       if (response.status === 200) {
         // Handle response based on submission type
         if (submitType === "LINK") {
-          setMessage("Link submission successful");
+          setMessage("Link submission successful :)");
         } else if (submitType === "KEY") {
           const responseData = response.data;
           if (responseData.message === "Flag submission successful") {
-            setMessage("Flag submission successful");
+            setMessage("congratulations you find the flag !");
             setError("");
           } else {
             setError("Incorrect flag");
             setMessage("");
           } 
-        } else if(response.data ===400) {
-          setError("you have already submitted the flag !");
-          setMessage("");
-        }
+        } 
       } else {
         // Handle other response statuses
-        setError(response.data.error || "An unexpected error occurred");
+        setError(response.data.error || "incorrect flag ! try again");
         setMessage("");
       }
     } catch (err) {

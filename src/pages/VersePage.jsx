@@ -89,7 +89,7 @@ const VersePage = (props) => {
                     <div
                       key={index}
                       className={`cursor-pointer flex flex-col items-center justify-center ${
-                        !challenge.total_points === 500
+                        !(challenge.total_points === 500)
                           ? `bg-[#2D0A4E] border-[#7D26CD]`
                           : `bg-[#0D6842] border-[#26CD87]`
                       }  border-[3px] border-solid rounded-[2.5rem] h-[250px]`}
